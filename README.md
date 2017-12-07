@@ -34,7 +34,7 @@ We started with KNN, as it is one of the simplest regression models. As a baseli
 ![KNN Regression](/FIGURES/KNN_REGRESSION.png)
 
 ## Regularized (Ridge) Regression 
-The next approach we evaluated was Ridge regression. We first fit the log(followers) using only playlist popularity as predictor. This yielded an R<sup>2<sup> score of 0.12 on the test set. We then added in all of the predictors, as well as second-order polynomial features for the continuous predictors, and interaction terms between loudness, danceability, speechiness, and tempo, as our EDA revealed these to have important interactions. The test R<sup>2<sup> score in this case soared to 0.48. We used cross-validation to estimate the optimal regularization parameter, which we found to be 0.1. The mean cross-validation score on the training set for this model was 0.45.
+The next approach we evaluated was Ridge regression. We first fit the log(followers) using only playlist popularity as predictor. This yielded an R<sup>2</sup> score of 0.12 on the test set. We then added in all of the predictors, as well as second-order polynomial features for the continuous predictors, and interaction terms between loudness, danceability, speechiness, and tempo, as our EDA revealed these to have important interactions. The test R<sup>2</sup> score in this case soared to 0.48. We used cross-validation to estimate the optimal regularization parameter, which we found to be 0.1. The mean cross-validation score on the training set for this model was 0.45.
 
 ## Gradient Boosted Regression Tree
 
@@ -42,7 +42,7 @@ The next approach we evaluated was Ridge regression. We first fit the log(follow
 
 # Results, Conclusions, and Future Work
 
-|                | Cross validation score | Training set <sup>R2<sup> | Test set R<sup>2<sup> |
+|                | Cross validation score | Training set <sup>R2</sup> | Test set R<sup>2</sup> |
 |----------------|------------------------|-----------------|-------------|
 | KNN            |                        |                 |             |
 | Ridge          |      0.45              |    0.56         |  0.48       |

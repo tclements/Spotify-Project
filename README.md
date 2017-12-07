@@ -27,6 +27,8 @@ Interaction terms were included based on observation of predictor interaction. L
 ## KNN
 We started with KNN, as it is one of the simplest regression models. As a baseline, a KNN model was fit to all predictors in our data set. This model performed poorly, with an R<sup>2</sup> of 0.05 on the testing set. We then fit a KNN model on the quantitative features for each playlist. This increased the R<sup>2</sup> to 0.23. We finally included the interaction terms of loudness and danceablilty for the final KNN regression, as we identified these as important predictors in our EDA. This increased the R<sup>2</sup> once again to 0.33.
 
+![KNN Regression](/FIGURES/KNN_REGRESSION.png)
+
 ## Regularized Regression 
 
 ## Gradient Boosted Regression Tree

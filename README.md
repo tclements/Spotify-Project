@@ -25,7 +25,7 @@ After constructing the playlist data frame, we explored the influence of differe
 Interaction terms were included based on observation of predictor interaction. Loudness influenced the spread of other song characteristics and danceability was influenced by the speechiness and tempo of the song (see ipython notebook for more details).
 
 ## KNN
-oh wow 
+We started with KNN, as it is one of the simplest regression models. As a baseline, a KNN model was fit to all predictors in our data set. This model performed poorly, with an $R^2$ of 0.05 on the testing set. We then fit a KNN model on the quantitative features for each playlist. This increased the $R^2$ to 0.23. We finally included the interaction terms of loudness and danceablilty for the final KNN regression, as we identified these as important predictors in our EDA. This increased the $R^2$ once again to 0.33.
 
 ## Regularized Regression 
 

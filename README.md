@@ -20,9 +20,17 @@ The success of our models to predict playlist popularity is dependent on being a
 Creating new playlists requires finding songs that are similar. The earliest work on machine playlist creation was in quantitatively fnding similarity between songs. Logan and Salomon, 2001 implemented an alogrithm to find the "distance" between songs by computing the spectral features of each song. Songs with similar spectral features, or signatures, were most likely similar. This method was able to find songs that were either in the same genre, by the same artist or on the same album. We use a similar distance measure create playlists for each genre. Berenzweig et al., 2003 extended the work of Logan and Salomon, by including subjective information about artist similarity from surveys of humans, and web scraping music data bases and online playlists. They used these data to build similarity matrices that give the probability of two artists being on the same playlists. We use both strategies, computing the distance between songs and building a similarity matrix to build our playlists. 
 
 # Modeling Approach and Project Trajectory
-After constructing the playlist data frame, we explored the influence of different predictors on the number of followers (the response variable). The first thing we noticed is that the response variable is heavily imbalanced (right-skewed), with a small number of extremely popular playlists (Fig. 1). We therefore predict the log(followers) for a given playlist, rather than the absolute number of followers. 
+After constructing the playlist data frame, we explored the influence of different predictors on the number of followers (the response variable). The first thing we noticed is that the response variable is heavily imbalanced (right-skewed), with a small number of extremely popular playlists (Fig. 1). We therefore predict the log(followers) for a given playlist, rather than the absolute number of followers. Playlists with zero followers (26) were removed from the dataset because it was assumed that these playlists may be not representative of the population of followed playlists - they may be intended to be listened to without users actually choosing to follow them (i.e. soothing background noise).
+
+Interaction terms were included based on observation of predictor interaction. Loudness influenced the spread of other song characteristics and danceability was influenced by the speechiness and tempo of the song (see ipython notebook for more details).
+
+## KNN
+
+## Regularized Regression 
 
 ## Gradient Boosted Regression Tree
+
+## MMP
 
 # Results, Conclusions, and Future Work
 

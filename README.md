@@ -45,7 +45,8 @@ The most important quantitative predictors for tree splits were popularity and n
 
 ![Predictor Importance](/FIGURES/GBRTree_predictors)
 
-## MMP
+## MLP
+The new method that was implemented was a neural networks method called Multi-layer Perceptron and there is a sklearn package called MLPRegressor that can be used to implement MLP regression. The process was very similar to gradient boosted regression in that parameters were fit in a two step process. The regularization parameter (alpha, range 0.1-0.00001) was first fit and then activation which is the function used for the hidden layer and the number of hidden layers (range 50-200). The optimal parameters were a regularization parameter of 0.1, a logistic function for the activation function and using 200 hidden layers. 
 
 # Results, Conclusions, and Future Work
 

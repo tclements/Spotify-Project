@@ -38,12 +38,12 @@ The next approach we evaluated was Ridge regression. We first fit the log(follow
 
 # Results, Conclusions, and Future Work
 
-|                | Cross validation score | Training set R2 | Test set R2 |   |
-|----------------|------------------------|-----------------|-------------|---|
-| KNN            |                        |                 |             |   |
-| Ridge          |                        |                 |             |   |
-| Gradient Boost |                        |                 |             |   |
-| MLP            |                        |                 |             |   |
+|                | Cross validation score | Training set R2 | Test set R2 |
+|----------------|------------------------|-----------------|-------------|
+| KNN            |                        |                 |             |
+| Ridge          |                        |                 |             |
+| Gradient Boost |                        |                 |             |
+| MLP            |                        |                 |             |
 
 Future work: 
 * Download more playlists from users other than Spotify. 

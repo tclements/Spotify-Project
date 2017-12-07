@@ -30,6 +30,7 @@ We started with KNN, as it is one of the simplest regression models. As a baseli
 ![KNN Regression](/FIGURES/KNN_REGRESSION.png)
 
 ## Regularized Regression 
+The next approach we evaluated was Ridge regression. We first fit the log(followers) using only playlist popularity as predictor. This yielded an R2 score of 0.12 on the test set. We then added in all of the predictors, as well as second-order polynomial features for the continuous predictors, and interaction terms between loudness, danceability, speechiness, and tempo, as our EDA revealed these to have the most impact on other predictors. The test R2 score in this case soared to 0.48. The mean cross-validation score on the training set for this model was 0.45.
 
 ## Gradient Boosted Regression Tree
 

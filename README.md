@@ -41,7 +41,7 @@ The next approach we evaluated was Ridge regression. We first fit the log(follow
 |                | Cross validation score | Training set R2 | Test set R2 |
 |----------------|------------------------|-----------------|-------------|
 | KNN            |                        |                 |             |
-| Ridge          |                        |                 |             |
+| Ridge          |      0.45              |    0.56         |  0.48       |
 | Gradient Boost |                        |                 |             |
 | MLP            |                        |                 |             |
 

@@ -20,7 +20,11 @@ The success of our models to predict playlist popularity is dependent on being a
 Creating new playlists requires finding songs that are similar. The earliest work on machine playlist creation was in quantitatively fnding similarity between songs. Logan and Salomon, 2001 implemented an alogrithm to find the "distance" between songs by computing the spectral features of each song. Songs with similar spectral features, or signatures, were most likely similar. This method was able to find songs that were either in the same genre, by the same artist or on the same album. We use a similar distance measure create playlists for each genre. Berenzweig et al., 2003 extended the work of Logan and Salomon, by including subjective information about artist similarity from surveys of humans, and web scraping music data bases and online playlists. They used these data to build similarity matrices that give the probability of two artists being on the same playlists. We use both strategies, computing the distance between songs and building a similarity matrix to build our playlists. 
 
 # Modeling Approach and Project Trajectory
-After constructing the playlist data frame, we explored the influence of different predictors on the number of followers (the response variable). The first thing we noticed is that the response variable is heavily imbalanced (right-skewed), with a small number of extremely popular playlists (Fig. 1). We therefore predict the log(followers) for a given playlist, rather than the absolute number of followers. Playlists with zero followers (26) were removed from the dataset because it was assumed that these playlists may be not representative of the population of followed playlists - they may be intended to be listened to without users actually choosing to follow them (i.e. soothing background noise).
+After constructing the playlist data frame, we explored the influence of different predictors on the number of followers (the response variable). The first thing we noticed is that the response variable is heavily imbalanced (right-skewed), with a small number of extremely popular playlists:
+
+![log_followers](/FIGURES/logfollowers.png)
+
+ We therefore predict the log(followers) for a given playlist, rather than the absolute number of followers. Playlists with zero followers (26) were removed from the dataset because it was assumed that these playlists may be not representative of the population of followed playlists - they may be intended to be listened to without users actually choosing to follow them (i.e. soothing background noise).
 
 Interaction terms were included based on observation of predictor interaction. Loudness influenced the spread of other song characteristics and danceability was influenced by the speechiness and tempo of the song (see ipython notebook for more details).
 
@@ -30,7 +34,7 @@ We started with KNN, as it is one of the simplest regression models. As a baseli
 ![KNN Regression](/FIGURES/KNN_REGRESSION.png)
 
 ## Regularized (Ridge) Regression 
-The next approach we evaluated was Ridge regression. We first fit the log(followers) using only playlist popularity as predictor. This yielded an R2 score of 0.12 on the test set. We then added in all of the predictors, as well as second-order polynomial features for the continuous predictors, and interaction terms between loudness, danceability, speechiness, and tempo, as our EDA revealed these to have important interactions. The test R2 score in this case soared to 0.48. We used cross-validation to estimate the optimal regularization parameter, which we found to be 0.1. The mean cross-validation score on the training set for this model was 0.45.
+The next approach we evaluated was Ridge regression. We first fit the log(followers) using only playlist popularity as predictor. This yielded an R<sup>2<sup> score of 0.12 on the test set. We then added in all of the predictors, as well as second-order polynomial features for the continuous predictors, and interaction terms between loudness, danceability, speechiness, and tempo, as our EDA revealed these to have important interactions. The test R<sup>2<sup> score in this case soared to 0.48. We used cross-validation to estimate the optimal regularization parameter, which we found to be 0.1. The mean cross-validation score on the training set for this model was 0.45.
 
 ## Gradient Boosted Regression Tree
 
@@ -38,7 +42,7 @@ The next approach we evaluated was Ridge regression. We first fit the log(follow
 
 # Results, Conclusions, and Future Work
 
-|                | Cross validation score | Training set R2 | Test set R2 |
+|                | Cross validation score | Training set <sup>R2<sup> | Test set R<sup>2<sup> |
 |----------------|------------------------|-----------------|-------------|
 | KNN            |                        |                 |             |
 | Ridge          |      0.45              |    0.56         |  0.48       |

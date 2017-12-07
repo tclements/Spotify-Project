@@ -44,10 +44,10 @@ The next approach we evaluated was Ridge regression. We first fit the log(follow
 
 |                | Cross validation score | Training set <sup>R2</sup> | Test set R<sup>2</sup> |
 |----------------|------------------------|-----------------|-------------|
-| KNN            |                        |                 |             |
+| KNN            |      0.35              |                 |             |
 | Ridge          |      0.45              |    0.56         |  0.48       |
-| Gradient Boost |                        |                 |             |
-| MLP            |                        |                 |             |
+| Gradient Boost |      0.55              |                 |             |
+| MLP            |      0.44              |                 |             |
 
 Future work: 
 * Download more playlists from users other than Spotify. 

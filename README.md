@@ -49,7 +49,7 @@ The most important quantitative predictors for tree splits were popularity and n
 
 # Results, Conclusions, and Future Work
 
-|                | Cross validation score | Training set <sup>R2</sup> | Test set R<sup>2</sup> |
+|                | Cross validation score | Training set R<sup>2</sup> | Test set R<sup>2</sup> |
 |----------------|------------------------|-----------------|-------------|
 | KNN            |      0.35              |                 |             |
 | Ridge          |      0.45              |    0.56         |  0.48       |

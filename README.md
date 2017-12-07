@@ -25,6 +25,7 @@ After constructing the playlist data frame, we explored the influence of differe
 Interaction terms were included based on observation of predictor interaction. Loudness influenced the spread of other song characteristics and danceability was influenced by the speechiness and tempo of the song (see ipython notebook for more details).
 
 ## KNN
+oh wow 
 
 ## Regularized Regression 
 

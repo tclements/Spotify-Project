@@ -36,6 +36,12 @@ We started with KNN, as it is one of the simplest regression models. As a baseli
 ## Regularized (Ridge) Regression 
 The next approach we evaluated was Ridge regression. We first fit the log(followers) using only playlist popularity as predictor. This yielded an R<sup>2</sup> score of 0.12 on the test set. We then added in all of the predictors, as well as second-order polynomial features for the continuous predictors, and interaction terms between loudness, danceability, speechiness, and tempo, as our EDA revealed these to have important interactions. The test R<sup>2</sup> score in this case soared to 0.48. We used cross-validation to estimate the optimal regularization parameter, which we found to be 0.1. The mean cross-validation score on the training set for this model was 0.45.
 
+We determined which predictors are most important by computing the absolute magnitudes of their fitted coefficients. These are the top 30 predictors:
+![ridge_top](/FIGURES/ridge_top_predictors.png)
+
+These are the bottom 30 predictors:
+![ridge_bot](/FIGURES/ridge_bot_predictors.png)
+
 ## Gradient Boosted Regression Tree
 Gradient Boosted Regression was used to predict playlists to see if we could improve on typical methods of regression. All quantitative and indicator variables were used as predictors, including interaction terms discussed above. Data was split into test and train sets, and the training set was used to fit the model. Cross validation was used to determine the optimal model fit which required a grid search for learning rate (range 0.1-0.01), maximum depth (4-12), minimum samples per leaf (3-7) and maximum number of features used for split decision (0.3-0.6). The optimal parameters were a learning rate of 0.01, maximum depth of 12, maximum number of features used of 0.3 and minimum samples per leaf of 7. The high value for minimum samples per leaf may in part have been chosen to compensate for the high maximum depth. Then a second grid search with cross validation was performed to find the optimal learning rate given the optimal parameters (range of 0.1-0.001 was used). The optimal learning rate remained 0.01, resulting in an $R^2$ score of 0.97 which is very high, likely due to overfitting to the training set which is shown by the wide separation between test and train error in the deviance plot shown below.  
 

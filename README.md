@@ -60,7 +60,7 @@ The new method that was implemented was a neural networks method called Multi-la
 
 # Results, Conclusions, and Future Work
 
-The model that does the best based on cross validation scores using the training data set is Gradient Boosted Regression Tree with a cross validation score of 0.55. This model was then evaluated using the test set and has a test score of 0.54. The residual plot, shown below, shows that the model does a good job overall. In general the model struggles to predict the natural log of followers for playlists that have a low number of followers shown by the larger residuals. The poor prediction for unpopular playlists could be due to factors not captured in our model. For example, some of the playlists with the lowest number of followers also have obscure and uninformative names. 
+The model that does the best based on cross validation scores using the training data set is Gradient Boosted Regression Tree with a cross validation score of 0.55. This model was then evaluated using the test set and has a test score of 0.54. The residual plot, shown below, shows that the model does a good job overall. In general the model struggles to predict the natural log of followers for playlists that have a low number of followers shown by the larger residuals. The poor prediction for unpopular playlists could be due to factors not captured in our model. For example, some of the playlists with the lowest number of followers also have obscure and uninformative names.  
 
 ![Residual Plot Test Set](/FIGURES/GBRTree_residaul)
 

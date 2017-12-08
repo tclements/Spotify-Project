@@ -80,8 +80,8 @@ We implemented a simple algorithm to generate playlists based on an input song. 
 
 Kanye West: Through The Wire
 
-| artist          |             track_name |
--------------     | .     :-------------:|
+artist          |             track_name 
+---     |  ---
      Kanye West          |               Hey Mama
     Frank Ocean          |              Swim Good
     Nicki Minaj          |            High School

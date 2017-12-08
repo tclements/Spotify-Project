@@ -71,7 +71,7 @@ The model that does the best based on cross validation scores using the training
 | KNN            |      0.35              |                 |             |
 | Ridge          |      0.45              |    0.56         |  0.48       |
 | Gradient Boost |      0.55              |                 |  0.54       |
-| MLP            |      0.44              |                 |             |
+| MLP            |      0.44              |    0.52         |             |
 
 Future work: 
 * Download more playlists from users other than Spotify. 

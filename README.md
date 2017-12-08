@@ -60,7 +60,7 @@ The new method that was implemented is a neural network method called Multi-laye
 
 # Results and Conclusions
 
-In general all the models, after being fit for optimal parameters, did relatively well at predicting the natural logarithm of followers. All models were able to be improved through the use of cross validation to find optimal parameters. The simplist model considered, knn using all predictors, did a very poor job of predicting, but was vastly improved when new variables (interactions) were included and when optimal parameters were used as shown in the knn plot of score versus number of points used to predict. It was also observed that model scores were very sensitive to how the data was split (train/test and splits for cross-validation) which may be due to the variability in the data, so this may be prevented in future by using a larger data set. 
+In general all the models, after being fit for optimal parameters, did relatively well at predicting the natural logarithm of followers. All models were able to be improved through the use of cross validation to find optimal parameters. The simplist models considered, knn using all predictors and Ridge using only popularity, did a very poor job of predicting, but both were vastly improved when new variables (interactions) were included and when optimal parameters were used as shown in the knn plot of score versus number of points used to predict. It was also observed that model scores were very sensitive to how the data was split (train/test and splits for cross-validation) which may be due to the variability in the data, so this may be prevented in future by using a larger data set. 
 
 |                | Cross validation score |
 |----------------|------------------------|

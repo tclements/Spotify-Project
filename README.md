@@ -22,7 +22,7 @@ Creating new playlists requires finding songs that are similar. The earliest wor
 # Modeling Approach and Project Trajectory
 After constructing the playlist data frame, we explored the influence of different predictors on the number of followers (the response variable). The first thing we noticed is that the response variable is heavily imbalanced (right-skewed), with a small number of extremely popular playlists:
 
-![logfollowers](/FIGURES/logfollowers.png)
+![logfollowers](/FIGURES/Followers_hist)
 
  We therefore predict the log(followers) for a given playlist, rather than the absolute number of followers. Playlists with zero followers (26) were removed from the dataset because it was assumed that these playlists may be not representative of the population of followed playlists - they may be intended to be listened to without users actually choosing to follow them (i.e. soothing background noise).
 

@@ -29,7 +29,7 @@ After constructing the playlist data frame, we explored the influence of differe
 Interaction terms were included based on observation of predictor interaction. Loudness influenced the spread of other song characteristics and danceability was influenced by the speechiness and tempo of the song (see ipython notebook for more details).
 
 ## KNN
-We started with KNN, as it is one of the simplest regression models. As a baseline, a KNN model was fit to all predictors in our data set to predict the log of followers for each playlist. This model performed poorly, with an R<sup>2</sup> of 0.05 on the testing set. We then fit a KNN model on the quantitative features for each playlist. This increased the R<sup>2</sup> to 0.23. We finally included the interaction terms of loudness and danceablilty for the final KNN regression, as we identified these as important predictors in our EDA. This increased the R<sup>2</sup> once again to 0.33.
+We started with KNN, as it is one of the simplest regression models. As a baseline, a KNN model was fit to all predictors in our data set to predict the log of followers for each playlist. This model performed poorly, with an R<sup>2</sup> of 0.05 on the testing set. We then fit a KNN model on the quantitative features only for each playlist in order to prevent the predictions from being too dependent on the indicator variables. This increased the R<sup>2</sup> to 0.23. We finally included the interaction terms of loudness and danceablilty for the final KNN regression, as we identified these as important predictors in our EDA. This increased the R<sup>2</sup> once again to 0.33.
 
 ![KNN Regression](/FIGURES/KNN_REGRESSION.png)
 
@@ -59,6 +59,8 @@ The most important quantitative predictors for tree splits were popularity and n
 The new method that was implemented is a neural network method called Multi-layer Perceptron. There is an sklearn package called MLPRegressor that can be used to implement MLP regression. The process was very similar to gradient boosted regression in that parameters were fit in a two step process. The regularization parameter (alpha, range 0.1-0.00001) was first fit, and then activation, which is the function used for the hidden layer and the number of hidden layers (range 50-200). The optimal parameters were a regularization parameter of 0.1, a logistic function for the activation function, and using 200 hidden layers. 
 
 # Results and Conclusions
+
+In general all the models did relatively well at predicting the natural logarithm of followers. All models were able to be improved through the use of cross validation to find optimal parameters. The simplist model considered, knn using all predictors, did a very poor job of predicting, but was vastly improved when new variables (interactions) were included and when optimal parameters were used as shown in the knn plot of score versus number of points used to predict. It was also observed that model scores were very sensitive to how the data was split (train/test and splits for cross-validation) which may be due to the variability in the data, so this may be prevented in future by using a larger data set. 
 
 |                | Cross validation score |
 |----------------|------------------------|

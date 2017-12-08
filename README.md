@@ -71,9 +71,4 @@ The model that does the best based on cross validation scores using the training
 
 ![Residual Plot Test Set](/FIGURES/GBRTree_residual)
 
-Future work: 
-* Download more playlists from users other than Spotify. 
-* Inlcude playlists that were created by people (from websites such as “The Art of the Mix”)
-* Get user artists lists because artists co-occurring in a user's collection are probably linked. 
-* Get associated acts from Wikipedia to build playlists with similar artists 
-* Look for more predictors to capture playlists that have very low numbers of followers (possibly: how playlists are titled, how playlists are made available to users, etc.)
+With more time, there are several ways we would try to improve this work. First, we would download more playlists from archives other than Spotify. Here we work with an ensemble of ~1600 playlists, which is enough to draw broad conclusions, but our model evaluations would be more robust given more data. This would be particularly valuable for modeling playlists with extreme numbers of followers -- either very few, or large numbers. Another source of additional data would be playlists created by individual consumers, which are available on websites such as "The Art of the Mix." We could also explore user artists lists, because artists co-occurring in a user's collection are probably linked, and this information could be used to construct better playlists for evaluation by our model. Similarly, we could obtain associated acts from Wikipedia to build playlists with similar artists. Finally, it would be valuable to investigate predictors capturing playlists with very low numbers of followers. Some possibilities would be to look at playlist titles and how they are made available to users. 

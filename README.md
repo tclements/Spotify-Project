@@ -80,28 +80,28 @@ We implemented a simple algorithm to generate playlists based on an input song. 
 
 Kanye West: Through The Wire
 
-artist          |             track_name 
----     |  ---
-     Kanye West          |               Hey Mama
-    Frank Ocean          |              Swim Good
-    Nicki Minaj          |            High School
-    Alicia Keys          | Girl On Fire - Inferno Version
-    Chris Brown          |        Back To Sleep
-     Kanye West          |           Gold Digger
-  The Diplomats          |         Dipset Anthem
-  Juelz Santana          | Dipset (Santana's Town)
-     Kanye West          |       Through The Wire
-        Ashanti          | Helpless (feat. Ja Rule)
-Sage The Gemini           |            Good Thing
-  Missy Elliott  | One Minute Man (feat. Ludacris)
-     Kanye West            |        Touch The Sky
-    Chris Brown            |  Yo (Excuse Me Miss)
-   Busta Rhymes            |           Girlfriend
-          B.o.B             |             So Good
-     Kanye West             |       We Don't Care
-     Kanye West             |      Black Skinhead
-   Busta Rhymes       |  Calm Down (feat. Eminem)
-     Trey Songz             |                 1x1 
+artist | track_name 
+ --- | ---
+Kanye West | Hey Mama
+Frank Ocean | Swim Good
+Nicki Minaj | High School
+Alicia Keys | Girl On Fire - Inferno Version
+Chris Brown | Back To Sleep
+Kanye West | Gold Digger
+The Diplomats | Dipset Anthem
+Juelz Santana | Dipset (Santana's Town)
+Kanye West | Through The Wire
+Ashanti | Helpless (feat. Ja Rule)
+Sage The Gemini | Good Thing
+Missy Elliott | One Minute Man (feat. Ludacris)
+Kanye West | Touch The Sky
+Chris Brown | Yo (Excuse Me Miss)
+Busta Rhymes | Girlfriend
+B.o.B | So Good
+Kanye West | We Don't Care
+Kanye West | Black Skinhead
+Busta Rhymes | Calm Down (feat. Eminem)
+Trey Songz | 1x1 
 
 Six of the twenty songs on the playlist share the same artist (Kanye West). If we had more time, we would have input the playlist to one of our models to get the predicted number of followers.  We would then add and replace tracks from the playlist from our list of “closest” tracks. Each time we added or replaced a song we would run the playlist through our model to predict the number of followers. Our final would be the playlist with the most predicted followers. 
 

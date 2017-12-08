@@ -103,5 +103,5 @@ Kanye West | Black Skinhead
 Busta Rhymes | Calm Down (feat. Eminem)
 Trey Songz | 1x1 
 
-Six of the twenty songs on the playlist share the same artist (Kanye West). If we had more time, we would have input the playlist to one of our models to get the predicted number of followers.  We would then add and replace tracks from the playlist from our list of “closest” tracks. Each time we added or replaced a song we would run the playlist through our model to predict the number of followers. Our final would be the playlist with the most predicted followers. 
+Six of the twenty songs on the playlist share the same artist (Kanye West). If we had more time, we would have input the playlist to one of our models to get the predicted number of followers.  We would then add and replace tracks from the playlist from our list of “closest” tracks. Each time we added or replaced a song we would run the playlist through our model to predict the number of followers. Our final playlist would be the playlist with the most predicted followers. 
 

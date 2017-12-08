@@ -1,7 +1,7 @@
 # Spotify-Project
 Group project for AC 209 Data Science I
 
-Tia Scarpelli, Daniel Varon, Tim Clements 
+Group 53: Tia Scarpelli, Daniel Varon, Tim Clements 
 
 # Problem Statement and Motivation
 Our goal is to predict the number of followers a Spotify playlist will garner based on song-level categorical features and quantitative audio features. Once we have constructed our predictive model, we use it to build successful playlists based on a genre search filter. We write an algorithm to assemble playlists from songs of a user-specified genre, and then use our model to predict playlist success.

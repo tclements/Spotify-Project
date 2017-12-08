@@ -65,6 +65,7 @@ The model that does the best based on cross validation scores using the training
 ![Residual Plot Test Set](/FIGURES/GBRTree_residaul)
 
 
+
 |                | Cross validation score | Training set R<sup>2</sup> | Test set R<sup>2</sup> |
 |----------------|------------------------|-----------------|-------------|
 | KNN            |      0.35              |                 |             |
